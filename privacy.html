@@ -17,21 +17,23 @@
   <p class="meta">Effective September 20, 2026</p>
 
   <h2>Summary</h2>
-  <p><strong>Aarthika does not collect, transmit, or store any personal data.</strong> There are no user accounts,
-     no analytics, no advertising, and no network access of any kind. Everything the app does happens entirely on
-     your device.</p>
+  <p><strong>Aarthika itself does not collect, transmit, or store any personal data.</strong> There are no user
+     accounts, no analytics, and no advertising. The only data that leaves your device at all is, on some devices,
+     audio sent to Apple's own speech-recognition service when you use the microphone — see below.</p>
 
   <h2>Microphone and speech recognition</h2>
-  <p>Aarthika lets a child answer questions by speaking instead of typing. Audio is processed using Apple's
-     on-device Speech framework with on-device recognition explicitly required
-     (<code>requiresOnDeviceRecognition</code>) — the audio is never sent to Apple's servers or to us,
-     never leaves the device, and is never recorded or stored anywhere. It exists only transiently in memory
-     while the app converts speech to text for the current question.</p>
+  <p>Aarthika lets a child answer questions by speaking instead of typing, using Apple's Speech framework.
+     Aarthika always prefers on-device recognition and uses it whenever your device supports it — in that case
+     audio never leaves the device. On devices or situations where on-device recognition isn't available, iOS
+     falls back to sending the audio to Apple's own speech-recognition servers to produce the text, the same
+     standard mechanism used by Siri dictation and the keyboard's dictation button elsewhere on iPhone and iPad.
+     Aarthika itself never receives, stores, or has access to this audio in either case — only the resulting
+     text is used, for the current question only, and nothing is ever recorded or saved.</p>
 
   <h2>What we don't do</h2>
   <ul>
     <li>No account creation or sign-in</li>
-    <li>No data sent to us or to any third party</li>
+    <li>No data sent to us, ever</li>
     <li>No analytics or crash-reporting SDKs</li>
     <li>No advertising or ad tracking</li>
     <li>No location access</li>
